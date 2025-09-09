@@ -1,0 +1,253 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #3498db;
+  --text-color: #ecf0f1;
+  --white-color: #ffffff;
+  --gray-color: #bdc3c7;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f0f4f7, #e2e8ef);
+  color: var(--secondary-color);
+}
+
+/* Overall Layout */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: transparent;
+  overflow-y: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sidebar .logo h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu li a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li.active a {
+  background-color: var(--secondary-color);
+}
+
+.sidebar-menu li a i {
+  margin-right: 10px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.navbar .search-bar input {
+  border: 1px solid var(--gray-color);
+  border-radius: 5px;
+  padding: 8px 12px;
+  width: 300px;
+}
+
+.navbar .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .user-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* Product List */
+.product-list-container {
+  background-color: var(--white-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-list-container h3 {
+  margin: 0 0 15px 0;
+  color: var(--secondary-color);
+}
+
+.product-list-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-list-container th,
+.product-list-container td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--gray-color);
+}
+
+.product-list-container th {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.product-list-container tr:last-child td {
+  border-bottom: none;
+}
+
+.actions-cell button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 0.9em;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #f39c12;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+}
+
+.loading {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 1.5em;
+  color: var(--secondary-color);
+}
+
+/* Add to existing CSS */
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.add-btn {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Modal styles */
+.modal {
+  font-size: 14px;
+  background-color: var(--white-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal h4 {
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-form label {
+  font-weight: bold;
+}
+
+.modal-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid var(--gray-color);
+  border-radius: 5px;
+}
+
+.modal-form button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+/* New header styling for separate pages */
+.dashboard-header {
+  margin-bottom: 20px;
+}
